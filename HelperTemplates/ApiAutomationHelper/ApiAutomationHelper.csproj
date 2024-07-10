@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Drivers\**" />
+    <Compile Remove="ResourceObjects\**" />
+    <EmbeddedResource Remove="Drivers\**" />
+    <EmbeddedResource Remove="ResourceObjects\**" />
+    <None Remove="Drivers\**" />
+    <None Remove="ResourceObjects\**" />
+    <SpecFlowFeatureFiles Remove="Drivers\**" />
+    <SpecFlowFeatureFiles Remove="ResourceObjects\**" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="Drivers\**" />
+    <SpecFlowObsoleteCodeBehindFiles Remove="ResourceObjects\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Authentication\Result.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="Azure.Identity" Version="1.12.0" />
+	  <PackageReference Include="Azure.Security.KeyVault.Secrets" Version="4.6.0" />
+	  <PackageReference Include="Flurl" Version="2.8.2" />
+	  <PackageReference Include="Flurl.Http" Version="2.4.0" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.1" />
+	  <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+    <PackageReference Include="RestSharp" Version="111.2.0" />
+    <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
+	  <PackageReference Include="SpecFlow" Version="3.9.8" />
+	  <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.9.8" />
+	  <PackageReference Include="SpecFlow.xUnit" Version="3.9.8" />
+	  <PackageReference Include="xunit" Version="2.8.1" />
+	  <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Include="FluentAssertions" Version="6.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>bin\Debug\net8.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
